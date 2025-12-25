@@ -50,7 +50,7 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: 4rem;
   margin: 0 0 0.2rem 0;
-  color: var(--accent);
+  color: var(--bg2);
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 .subtitle {
@@ -63,7 +63,7 @@ body {
   border: none;
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
-  color: white;
+  color: black;
   font-weight: 600;
   cursor: pointer;
   font-size: 1rem;
@@ -265,5 +265,38 @@ body {
   100% {
     opacity: 0;
     transform: translate(-50%, -80px) scale(1.02);
+  }
+}
+
+/* site credit / author badge */
+.site-credit {
+  position: fixed;
+  left: 50%;
+  top: 12px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  z-index: 120;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.site-credit .author {
+  color: var(--accent);
+  font-weight: 700;
+  margin-left: 8px;
+}
+.site-credit:hover {
+  transform: translate(-50%, -2px);
+  transition: transform 160ms ease;
+}
+
+@media (max-width: 520px) {
+  .site-credit {
+    top: 8px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
   }
 }
